@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import '../../Styles/Pranav/login.css'
-import "../Pranav/Button"
 import Button from '../Pranav/Button';
+import Text_Entry from './Text_Entry';
 
 //import {BrowserRouter as Router, Link} from 'react-router-dom';
 
@@ -11,7 +11,6 @@ function LoginForm({ Login, error }) {
 
     const submitForm = e => {
         e.preventDefault();
-
         Login(details);
     }
 
@@ -34,14 +33,25 @@ function LoginForm({ Login, error }) {
                 <label htmlFor = "password">Password :</label>
                     <input type="password" name="password" id="password" onChange={e => setDetails({...details, password : e.target.value })} value = {details.password}/>
                 </div>
-                <Button value={"Log-in"}/> 
-                <Button value={"Sign Up"}/> 
-                {/* <input type="submit" value = "Log-In" /> */}
+                <br/>
+                <br/>
+                <Text_Entry prompt={"Username"}></Text_Entry>
+                <Text_Entry prompt={"Password"}></Text_Entry>
+
+
+                <Button prompt={"Log-in"}/> 
+                <Button prompt={"Sign Up"}/> 
+                
+                
+              
+
                 {/* <Router>
-            <Link to="./Signup-one.js">
-              <button>HELLO</button>
-            </Link>
-          </Router> */}
+                  <Link to="./Signup-one.js">
+                  <button>HELLO</button>
+                  </Link>
+                  </Router> */
+                }
+              
             </div>
         </div>
     </form>

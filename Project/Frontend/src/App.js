@@ -24,7 +24,7 @@ const App = () => {
       });
     }else{
       console.log("Details do not Match");
-      setError("Details don't Match Bitch!");
+      setError("Username or Password is incorrect");
     }
 
   }
