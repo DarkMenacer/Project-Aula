@@ -22,39 +22,11 @@ function LoginForm({ Login, error }) {
         </h2>
         {error !== "" ? <div className="error">{error}</div> : ""}
         <div className="form-elements">
-          <Text_Entry
-            prompt={"Name"}
-            type="text"
-            id="name"
-            name="name"
-            details={details}
-            setDetails={setDetails}
-          ></Text_Entry>
-          <Text_Entry
-            prompt={"Email"}
-            type="email"
-            id="email"
-            name="email"
-            details={details}
-            setDetails={setDetails}
-          ></Text_Entry>
-          <Text_Entry
-            prompt={"Password"}
-            type="password"
-            id="password"
-            name="password"
-            details={details}
-            setDetails={setDetails}
-          ></Text_Entry>
-
+          <Text_Entry prompt={"Name"} type="text" id="name" name="name" details={details} setDetails={setDetails} />
+          <Text_Entry prompt={"Email"} type="email" id="email" name="email" details={details} setDetails={setDetails} />
+          <Text_Entry prompt={"Password"} type="password" id="password" name="password" details={details} setDetails={setDetails} />
           <Button prompt={"Log-in"} />
           <Button prompt={"Sign Up"} />
-
-          {/* <Router>
-                  <Link to="./Signup-one.js">
-                  <button>HELLO</button>
-                  </Link>
-                  </Router> */}
         </div>
       </div>
     </form>
