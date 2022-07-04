@@ -1,5 +1,5 @@
 import React from 'react'
-import "../../Styles/Pranav/buttonstyle.css"
+import "./buttonstyle.css"
 
 const Button = ({prompt}) => {
   return (
