@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Button from "./components/Button";
-import LoginForm from "./components/LoginForm";
-import Signup_one from "./components/Signup-one";
+// import Button from "./components/Button";
+import LoginForm from "./Components/Pranav/LoginForm";
+// import Signup_one from "./components/Signup-one";
 // import {BrowserRouter as Router, Link} from 'react-router-dom';
 
 const App = () => {
