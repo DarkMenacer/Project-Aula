@@ -1,5 +1,5 @@
 import React from "react";
-import "../../Styles/Pranav/text_entry_style.css"
+import "./text_entry_style.css"
 
 const Text_Entry = ({prompt}) => {
 

@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import '../../Styles/Pranav/login.css'
-import Button from '../Pranav/Button';
-import Text_Entry from './Text_Entry';
+import Button from './Button/Button';
+import Text_Entry from './Text_Entry/Text_Entry';
 
 //import {BrowserRouter as Router, Link} from 'react-router-dom';
 
@@ -35,14 +35,12 @@ function LoginForm({ Login, error }) {
                 </div>
                 <br/>
                 <br/>
+
+
                 <Text_Entry prompt={"Username"}></Text_Entry>
                 <Text_Entry prompt={"Password"}></Text_Entry>
-
-
                 <Button prompt={"Log-in"}/> 
-                <Button prompt={"Sign Up"}/> 
-                
-                
+                <Button prompt={"Sign Up"}/>
               
 
                 {/* <Router>
