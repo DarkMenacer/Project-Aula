@@ -1,11 +1,9 @@
 import React from 'react'
-import "./buttonstyle.css"
+import "./Button_Style.css"
 
-const Button = ({prompt}) => {
-  return (
-    <span>
-        <button>{prompt}</button>
-    </span>
+const Button = ({prompt, type}) => {
+  return ( 
+    <button className={type}>{prompt}</button>
   )
 }
 export default Button
