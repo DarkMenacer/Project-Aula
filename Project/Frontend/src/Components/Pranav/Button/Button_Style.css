@@ -1,4 +1,4 @@
-.solid_button{
+.solid_btn{
     background-color: #6558F5;
     color:aliceblue;
     padding: 0.4rem;
@@ -6,7 +6,7 @@
     margin-inline: 1rem;
 }
 
-.outline_button{
+.outline_btn{
     background-color:  white;
     color:#6558F5;
     padding: 0.4rem;
