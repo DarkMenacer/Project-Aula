@@ -12,6 +12,10 @@ function LoginForm({ Login, error }) {
     Login(details);
   };
 
+  const HandleClick = () => {
+    alert("Got clicked");
+  }
+
   return (
     //<Router>
 
@@ -25,7 +29,7 @@ function LoginForm({ Login, error }) {
           <Text_Entry prompt={"Name"} type="text" id="name" name="name" details={details} setDetails={setDetails} />
           <Text_Entry prompt={"Email"} type="email" id="email" name="email" details={details} setDetails={setDetails} />
           <Text_Entry prompt={"Password"} type="password" id="password" name="password" details={details} setDetails={setDetails} />
-          <Button prompt={"Log-in"} type={"solid_button"}/>
+          <Button prompt={"Log-in"} type={"solid_button"} />
           <Button prompt={"Sign Up"} type={"outline_button"} />
         </div>
       </div>
