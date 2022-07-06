@@ -8,5 +8,4 @@ const Button = ({prompt}) => {
     </span>
   )
 }
-
 export default Button
