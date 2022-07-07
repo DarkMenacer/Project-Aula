@@ -1,7 +1,6 @@
 import React from 'react'
-import Button from './Button';
 
-function Signup_one() {
+function SignUpOne() {
   return (
     <div>
         <div className="form-inner">
@@ -16,4 +15,4 @@ function Signup_one() {
   )
 }
 ß
-export default Signup_one;
+export default SignUpOne;

@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Button_Style.css"
+import "./ButtonStyle.css"
 
 const Button = ({prompt, variation, action}) => {
   return ( 
