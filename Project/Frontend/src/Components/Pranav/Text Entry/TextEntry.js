@@ -1,7 +1,7 @@
 import React from "react";
-import "./Text_Entry_Style.css";
+import "./TextEntryStyle.css";
 
-const Text_Entry = ({
+const TextEntry = ({
   prompt,
   type,
   id,
@@ -10,7 +10,7 @@ const Text_Entry = ({
   setDetails = undefined,
 }) => {
   return (
-    <div className="Text_Entry">
+    <div className="TextEntry">
       <span>{prompt}: </span>
       <span>
         {" "}
@@ -30,4 +30,4 @@ const Text_Entry = ({
   );
 };
 
-export default Text_Entry;
+export default TextEntry;
