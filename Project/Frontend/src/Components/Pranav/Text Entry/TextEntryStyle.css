@@ -1,4 +1,11 @@
 .TextEntry{
     padding: 0.5rem 0rem 0.5rem 0rem;
-    /*background-color: aqua;*/
+    text-align: left;
+    margin: auto;
+}
+
+input{
+    border: 0.075rem black solid;
+    /* color: lightslategray;
+    font-style: italic; */
 }

@@ -11,8 +11,8 @@ const TextEntry = ({
 }) => {
   return (
     <div className="TextEntry">
-      <span>{prompt}: </span>
-      <span>
+      <div>{prompt}: </div>
+      <div>
         {" "}
         {details === undefined ? (
           <input type={type} id={id} name={name} />
@@ -25,7 +25,7 @@ const TextEntry = ({
             value={details[name]}
           />
         )}
-      </span>
+      </div>
     </div>
   );
 };
