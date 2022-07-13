@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "../../Styles/Pranav/login.css";
-import Button from "./Button/Button";
-import TextEntry from "./Text Entry/TextEntry";
-import Wordmark from "./Wordmark/Wordmark";
-import Avatar from "./Avatar/Avatar";
+import "./Login.css";
+import Button from "../../Components/Pranav/Button/Button";
+import TextEntry from "../../Components/Pranav/Text Entry/TextEntry";
+import Wordmark from "../../Components/Pranav/Wordmark/Wordmark";
+import Avatar from "../../Components/Pranav/Avatar/Avatar";
 
 function LoginForm({ Login, error }) {
   const [details, setDetails] = useState({ name: "", email: "", password: "" });
