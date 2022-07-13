@@ -1,0 +1,16 @@
+.solid_btn{
+    background-color: #6558F5;
+    color:aliceblue;
+    padding: 0.4rem;
+    border-radius: 20%;
+    margin-inline: 1rem;
+}
+
+.outline_btn{
+    background-color:  white;
+    color:#6558F5;
+    padding: 0.4rem;
+    border-radius: 10%;
+    margin-inline: 1rem;
+    border-color: #6558F5;
+}

@@ -1,0 +1,7 @@
+.container{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.65rem;
+    width: 50%;
+    background-color: bisque;
+}
