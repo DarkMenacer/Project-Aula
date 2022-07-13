@@ -8,7 +8,7 @@
 
     /*All measurements in pixel, need to change them*/
 
-    display: block;
+    display: inline;
     text-align: center;
 }
 

@@ -1,5 +1,7 @@
 .TextEntry{
     padding: 0.5rem 0rem 0.5rem 0rem;
+    text-align: left;
+    margin: auto;
 }
 
 input{

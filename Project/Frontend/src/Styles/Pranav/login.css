@@ -2,30 +2,13 @@
     margin: auto;
     margin-top: 5%;
     width: 35%;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     padding: 20px 40px 50px 40px;
-}
-
-.head{
-    color: maroon;
-    font-size: 5em;
-    border: 2px solid black;
-    padding: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
-    display: block;
-    /* width: 100%; */
-    /* margin: auto; */
-    text-align: center;
-}
-
-.form-group{
-    padding: 0.5%;
 }
 
 .form-elements{
     text-align: center;
     padding: 2%;
-    border: 2px solid black;    
+    /* border: 2px solid black;   */  
 }
     
