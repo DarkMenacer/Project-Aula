@@ -1,0 +1,23 @@
+ *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0.5rem;
+    min-width: fit-content;
+}
+
+.login_page{
+    text-align: center;
+    border: 0.25rem black solid;
+    margin: auto;
+    padding: 1rem;
+    max-width: fit-content;
+    display: block;
+} 

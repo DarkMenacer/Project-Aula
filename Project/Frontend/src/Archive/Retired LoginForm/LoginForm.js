@@ -29,11 +29,6 @@ function LoginForm({ Login, error }) {
           <Button prompt={"Sign Up"} variation={"outline_btn"} />
           {error !== "" ? <div className="error">{error}</div> : ""}
         </div>
-      {/* <br/>
-      <br/>
-      <br/>
-      <br/>
-      <Wordmark prompt={"Word Wall"} variation={"word_wall"}/> */}
       </div>  
     </form>
   );
