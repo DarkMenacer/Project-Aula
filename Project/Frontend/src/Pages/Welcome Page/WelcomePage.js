@@ -5,20 +5,24 @@ import Wordmark from "../../Components/Pranav/Wordmark/Wordmark";
 
 const WelcomePage = ({user}) => {
 
+    console.log("Logged IN");
+
     /* Strings */
-    const welcome = "Welcome " + user.name;
+    const welcome = "Hi " + user.name + "!";
     const loginPageRoute = '/LoginPage'
 
     /* Button Click Functions */
-
     const navigate = useNavigate();
-    const handleLogoutBtn = () => {navigate(loginPageRoute);}
+    const handleLogoutBtn = () => {
+        console.log("Logged OUT");
+        navigate(loginPageRoute);
+    }
 
     return (
-    <div>
-        <Wordmark prompt={welcome} variation="direction"/>
-        <Button prompt={"Logout"} variation={"solid_btn"} action={handleLogoutBtn} />
-    </div>
+        <div>
+            <Wordmark prompt={welcome} variation="direction"/>
+            <Button prompt={"Logout"} variation={"solid_btn"} action={handleLogoutBtn} />
+        </div>
     );
 }
 
