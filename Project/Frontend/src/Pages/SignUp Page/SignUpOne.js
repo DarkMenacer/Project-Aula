@@ -1,18 +1,38 @@
-import React from 'react'
+import React from 'react';
+import Button from '../../Components/Pranav/Button/Button';
+import Wordmark from '../../Components/Pranav/Wordmark/Wordmark';
+import './SignUpStyle.css'
+import {useNavigate} from 'react-router-dom';
 
 function SignUpOne() {
+
+    /* Hook Variables */
+    const navigate = useNavigate();
+    
+    /* Strings */
+    const newAccountRoute = "/SignUpTwoPage";
+
+    /* Button Click Functions */
+    const handleNewAccBtn = () => {
+      navigate(newAccountRoute);
+    };
+
+
   return (
-    <div>
-        <div className="form-inner">
-            <h2><span className = "head">Welcome</span></h2>
-            <div className="form-elements">
-                {/* <Button value="Sign-Up With Google"></Button>
-                <Button value="Sign-Up With Github"></Button>
-                <Button value="New Account"></Button> */}
-            </div> 
+    <div className='parent_signup'>
+      <div className="content_signup">
+        <div>
+          <Wordmark prompt={"Welcome"} variation={"headline"} />
         </div>
+        <hr />
+        <div className='btn_list'>
+          <Button prompt={"Sign-up with Google"} variation={"solid_btn"} />
+          <Button prompt={"Sign-up with Github"} variation={"solid_btn"} />
+          <Button prompt={"New Account"} variation={"outline_btn"} action={handleNewAccBtn}/>
+        </div>
+      </div>
     </div>
   )
 }
-ß
+
 export default SignUpOne;
