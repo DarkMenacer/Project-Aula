@@ -6,7 +6,7 @@ import Button from "../../Components/Pranav/Button/Button";
 import "./LoginPageStyle.css"
 import {useNavigate} from "react-router-dom";
 
-const LoginPage = ({user, setUser, adminUser}) => {
+const LoginPage = ({setUser, adminUser}) => {
 
     /* Variables */
     let allowed = false;
@@ -17,7 +17,7 @@ const LoginPage = ({user, setUser, adminUser}) => {
     
     /* Strings */
     const title = "AULA";
-    const welcomePageRoute = '/Success'
+    const welcomePageRoute = '/WelcomePage'
 
     /* Functions */
     const Login = (details) => {
@@ -36,8 +36,7 @@ const LoginPage = ({user, setUser, adminUser}) => {
     const handleLoginBtn = (e) => {
         e.preventDefault();
         Login(details);
-        if(allowed){navigate(welcomePageRoute, {state:{name:user.name,email:user.email}});}
-
+        if(allowed){navigate(welcomePageRoute);}
     }
 
     return (
