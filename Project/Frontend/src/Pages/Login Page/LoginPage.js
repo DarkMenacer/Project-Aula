@@ -40,21 +40,23 @@ const LoginPage = ({setUser, adminUser}) => {
     }
 
     return (
-        <div className="login_page">
-            <div>
-                <Avatar radius={"7.4rem"}/>
-                <Wordmark variation={"headline"} prompt={title}/>
+        <form onSubmit={handleLoginBtn} className="parent_login">
+            <div className="content_login">
+                <div>
+                    <Avatar radius={"7.4rem"}/>
+                    <Wordmark variation={"headline"} prompt={title}/>
+                </div>
+                <div>
+                    <hr/>
+                    <TextEntry prompt={"Name"} type="text" id="name" name="name" details={details} setDetails={setDetails} />
+                    <TextEntry prompt={"Email"} type="email" id="email" name="email" details={details} setDetails={setDetails} />
+                    <TextEntry prompt={"Password"} type="password" id="password" name="password" details={details} setDetails={setDetails} />
+                    <Button prompt={"Log-in"} variation={"solid_btn"} type={"submit"}/>
+                    <Button prompt={"Sign Up"} variation={"outline_btn"} />
+                    {error !== "" ? <div className="error">{error}</div> : ""}
+                </div>
             </div>
-            <div>
-                <hr/>
-                <TextEntry prompt={"Name"} type="text" id="name" name="name" details={details} setDetails={setDetails} />
-                <TextEntry prompt={"Email"} type="email" id="email" name="email" details={details} setDetails={setDetails} />
-                <TextEntry prompt={"Password"} type="password" id="password" name="password" details={details} setDetails={setDetails} />
-                <Button prompt={"Log-in"} variation={"solid_btn"} action={handleLoginBtn} />
-                <Button prompt={"Sign Up"} variation={"outline_btn"} />
-                {error !== "" ? <div className="error">{error}</div> : ""}
-            </div>
-        </div>
+        </form>
     );
 }
 

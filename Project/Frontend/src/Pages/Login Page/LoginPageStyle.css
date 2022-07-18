@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body{
+.parent_login{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +13,7 @@ body{
     min-width: fit-content;
 }
 
-.login_page{
+.content_login{
     text-align: center;
     border: 0.25rem black solid;
     margin: auto;
