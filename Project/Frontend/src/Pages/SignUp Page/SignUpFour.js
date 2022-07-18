@@ -19,7 +19,7 @@ const SignUpFour = () => {
 
     /* Button Click Functions */
     const handleSubmitBtn = () => {
-      alert("Account Created Bitch!");
+      alert("Account Created!");
       navigate(loginPage);
     };
 

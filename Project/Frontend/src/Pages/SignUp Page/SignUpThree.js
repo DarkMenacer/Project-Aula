@@ -3,7 +3,7 @@ import Wordmark from '../../Components/Pranav/Wordmark/Wordmark';
 import Button from '../../Components/Pranav/Button/Button';
 import TextEntry from '../../Components/Pranav/Text Entry/TextEntry';
 import {Select} from 'antd';
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.min.css';
 import './SignUpStyle.css';
 import { useNavigate } from 'react-router-dom';
 
