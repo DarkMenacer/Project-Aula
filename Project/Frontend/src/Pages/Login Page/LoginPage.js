@@ -11,13 +11,15 @@ const LoginPage = ({setUser, adminUser}) => {
     /* Variables */
     let allowed = false;
 
-    /* useState variables */
+    /* Hook variables */
     const [details, setDetails] = useState({ name: "", email: "", password: "" });
     const [error, setError] = useState("");
+    const navigate = useNavigate();
     
     /* Strings */
     const title = "AULA";
-    const welcomePageRoute = '/WelcomePage'
+    const welcomePageRoute = "/WelcomePage";
+    const signupPageRoute = "/SignupPage";
 
     /* Functions */
     const Login = (details) => {
@@ -32,17 +34,20 @@ const LoginPage = ({setUser, adminUser}) => {
     };
     
     /* Button Click Functions */
-    const navigate = useNavigate();
     const handleLoginBtn = (e) => {
         e.preventDefault();
         Login(details);
         if(allowed){navigate(welcomePageRoute);}
     }
+    const handleSignupBtn = (e) => {
+        e.preventDefault();
+        navigate(signupPageRoute);
+    }
 
     return (
         <form onSubmit={handleLoginBtn} className="parent_login">
             <div className="content_login">
-                <div>
+                <div className="logo">
                     <Avatar radius={"7.4rem"}/>
                     <Wordmark variation={"headline"} prompt={title}/>
                 </div>
@@ -52,7 +57,7 @@ const LoginPage = ({setUser, adminUser}) => {
                     <TextEntry prompt={"Email"} type="email" id="email" name="email" details={details} setDetails={setDetails} />
                     <TextEntry prompt={"Password"} type="password" id="password" name="password" details={details} setDetails={setDetails} />
                     <Button prompt={"Log-in"} variation={"solid_btn"} type={"submit"}/>
-                    <Button prompt={"Sign Up"} variation={"outline_btn"} />
+                    <Button prompt={"Sign Up"} variation={"outline_btn"} action={handleSignupBtn}/>
                     {error !== "" ? <div className="error">{error}</div> : ""}
                 </div>
             </div>

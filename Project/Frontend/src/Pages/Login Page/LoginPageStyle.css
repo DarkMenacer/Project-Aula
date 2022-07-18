@@ -9,15 +9,22 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding: 0.5rem;
     min-width: fit-content;
 }
 
 .content_login{
     text-align: center;
     border: 0.25rem black solid;
-    margin: auto;
+    padding: 4%;
+    margin: 1rem;
     padding: 1rem;
     max-width: fit-content;
     display: block;
 } 
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
