@@ -16,7 +16,7 @@ const SignUpThree = () => {
     const navigate = useNavigate();
     
     /* Strings */
-    const nextPage = "/SignUpFourPage";
+    const nextPage = "/SignUpFour";
     
     /* Button Click Functions */
     const handleSubmitBtn = () => {

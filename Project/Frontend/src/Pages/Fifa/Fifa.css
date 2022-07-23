@@ -1,0 +1,41 @@
+.parent_fifa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-width:fit-content;
+}
+
+.content_fifa{
+    background-color: blue;
+    width: 60%;
+    height: 60%;
+    border: 0.25rem black solid;
+    padding: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.title{
+    background-color: purple;
+    flex-basis: 70%;
+    height: 20%;
+    margin: 2%;
+    border: 0.25rem white solid;
+}
+
+.tile{
+    background-color: purple;
+    border: 0.25rem white solid;
+    flex-basis: 48%;
+    margin: 1%;
+    height: 70%;
+}
+
+.avt{
+    background-color: purple;
+    flex-basis: 25%;
+    height: 20%;
+    border: 0.25rem white solid;
+}
