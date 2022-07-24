@@ -17,13 +17,18 @@ const OrganiserHome = () =>{
         navigate(manageEventsRoute);
     };
 
+    const handleCreateEventsBtn = () => {
+        navigate(createEventsRoute);
+    }
+
     /* Strings */
     const informative = "Organiser Tab";
     const manageEventsRoute = "/ManageEvents";
+    const createEventsRoute = "/CreateEvents";
 
     /* Component Properties */
     const menuList = [
-        {variation: "outline_btn", prompt:"Create Event"},
+        {variation: "outline_btn", prompt:"Create Event", action: handleCreateEventsBtn},
         {variation: "outline_btn", prompt:"Manage Event", action: handleManageEventsBtn},
     ];
 
