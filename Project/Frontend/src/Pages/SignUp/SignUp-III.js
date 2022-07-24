@@ -2,25 +2,26 @@ import React from 'react';
 import Wordmark from '../../Components/Pranav/Wordmark/Wordmark';
 import Button from '../../Components/Pranav/Button/Button';
 import TextEntry from '../../Components/Pranav/Text Entry/TextEntry';
+import {Select} from 'antd';
+import 'antd/dist/antd.min.css';
 import './SignUpStyle.css';
 import { useNavigate } from 'react-router-dom';
 
-const SignUpTwo = () => {
-  
+const SignUpThree = () => {
+    
+    /* Variables */
+    const {Option} = Select;
+    
     /* Hook Variables */
     const navigate = useNavigate();
-      
+    
     /* Strings */
-    const askEmail = "Enter your Email Id";
-    const askPhone = "Enter your Phone No.";
-    const nextPage = "/SignUpThreePage";
-
-
+    const nextPage = "/SignUpFour";
+    
     /* Button Click Functions */
     const handleSubmitBtn = () => {
       navigate(nextPage);
     };
-
 
   return (
     <div className='parent_signup'>
@@ -30,9 +31,14 @@ const SignUpTwo = () => {
         </div>
         <hr />
         <div className='btn_list'>
-            <TextEntry prompt={askEmail} type={"email"} name={"email"} />
-            <TextEntry prompt={askPhone} type={"number"} name={"phone"} />
-            <Button prompt={"Submit"} variation={"solid_btn"} action={handleSubmitBtn}/>
+            <Wordmark prompt={"Gender"} variation={"word_wall"} />
+            <Select defaultValue={"male"}>
+                <Option value="female">Female</Option>
+                <Option value="male">Male</Option>
+                <Option value="other">Other</Option>
+            </Select>
+            <TextEntry prompt={"Date Of Birth"} type={"date"} name={"date"}/>
+            <Button prompt={"Submit"} variation={"solid_btn"} type={"submit"} action={handleSubmitBtn}/>
         </div>
         <hr />
       </div>
@@ -40,4 +46,4 @@ const SignUpTwo = () => {
   )
 }
 
-export default SignUpTwo;
+export default SignUpThree;

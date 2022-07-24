@@ -15,11 +15,11 @@ const SignUpFour = () => {
     const askUsername = "Enter your Username";
     const askPassword = "Enter your Password";
     const confirmPassword = "Confirm your Password";
-    const loginPage = "/LoginPage";
+    const loginPage = "/Login";
 
     /* Button Click Functions */
     const handleSubmitBtn = () => {
-      alert("Account Created Bitch!");
+      alert("Account Created!");
       navigate(loginPage);
     };
 

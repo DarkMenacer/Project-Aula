@@ -9,7 +9,7 @@ const WelcomePage = ({user}) => {
 
     /* Strings */
     const welcome = "Hi " + user.name + "!";
-    const loginPageRoute = '/LoginPage'
+    const loginPageRoute = '/Login'
 
     /* Button Click Functions */
     const navigate = useNavigate();

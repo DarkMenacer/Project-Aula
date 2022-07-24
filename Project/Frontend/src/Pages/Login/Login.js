@@ -3,7 +3,7 @@ import Wordmark from "../../Components/Pranav/Wordmark/Wordmark";
 import Avatar from "../../Components/Pranav/Avatar/Avatar";
 import TextEntry from "../../Components/Pranav/Text Entry/TextEntry";
 import Button from "../../Components/Pranav/Button/Button";
-import "./LoginPageStyle.css"
+import "./LoginStyle.css"
 import {useNavigate} from "react-router-dom";
 
 const LoginPage = ({setUser, adminUser}) => {
@@ -18,8 +18,8 @@ const LoginPage = ({setUser, adminUser}) => {
     
     /* Strings */
     const title = "AULA";
-    const welcomePageRoute = "/WelcomePage";
-    const signupPageRoute = "/SignupPage";
+    const welcomePageRoute = "/Welcome";
+    const signupPageRoute = "/SignupOne";
 
     /* Functions */
     const Login = (details) => {

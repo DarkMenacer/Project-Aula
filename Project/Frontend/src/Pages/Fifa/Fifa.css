@@ -1,0 +1,56 @@
+.parent_fifa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-width:fit-content;
+    background-color: gainsboro;
+}
+
+.content_fifa{
+    width: fit-content;
+    border: 0.25rem black solid;
+    padding: 2%;
+    background-color:darkblue;
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    border: 0.1rem grey solid;
+    padding: 0.3rem;
+    background-color: white;
+}
+
+.title{
+    flex-basis:90%;
+    min-width: fit-content;
+    margin: 1%;
+}
+
+.avt{
+    padding: 1%;
+}
+
+.tile{
+    flex-basis: 50%;
+    padding: 1%;
+    border: 0.1rem grey solid;
+    background-color: white;
+}
+
+.tile > img {
+    max-width:20rem;
+}
+
+.tile > :hover{
+    border: 0.25rem gold solid;
+}
+
+.mode_choice{
+    color: cyan;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}

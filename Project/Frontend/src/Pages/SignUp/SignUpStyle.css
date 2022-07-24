@@ -14,7 +14,7 @@
 }
 
 .content_signup{
-    max-width: fit-content;
+    width: fit-content;
     border: 0.25rem black solid;
     padding: 4%;
     display: flex;
