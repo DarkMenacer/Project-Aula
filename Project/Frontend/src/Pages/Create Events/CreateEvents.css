@@ -1,0 +1,27 @@
+.parent_cre_eve{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width:fit-content;
+    height: 100vh;
+    background-color: gainsboro;
+}
+
+.content_cre_eve{
+    min-width: 80%;
+    border: 0.25rem black solid;
+    padding: 2%;
+    background-color:lavender;
+    text-align: center;
+}
+
+.input_list{
+    height: fit-content;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: center;
+    border: 0.1rem black solid;
+    padding: 2%;
+}
