@@ -4,38 +4,53 @@
     align-items: center;
     height: 100vh;
     min-width:fit-content;
+    background-color: gainsboro;
 }
 
 .content_fifa{
-    background-color: blue;
-    width: 60%;
-    height: 60%;
+    width: fit-content;
     border: 0.25rem black solid;
     padding: 2%;
+    background-color:darkblue;
+}
+
+.wrapper{
     display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
+    align-items: center;
+    border: 0.1rem grey solid;
+    padding: 0.3rem;
+    background-color: white;
 }
 
 .title{
-    background-color: purple;
-    flex-basis: 70%;
-    height: 20%;
-    margin: 2%;
-    border: 0.25rem white solid;
-}
-
-.tile{
-    background-color: purple;
-    border: 0.25rem white solid;
-    flex-basis: 48%;
+    flex-basis:90%;
+    min-width: fit-content;
     margin: 1%;
-    height: 70%;
 }
 
 .avt{
-    background-color: purple;
-    flex-basis: 25%;
-    height: 20%;
-    border: 0.25rem white solid;
+    padding: 1%;
+}
+
+.tile{
+    flex-basis: 50%;
+    padding: 1%;
+    border: 0.1rem grey solid;
+    background-color: white;
+}
+
+.tile > img {
+    max-width:20rem;
+}
+
+.tile > :hover{
+    border: 0.25rem gold solid;
+}
+
+.mode_choice{
+    color: cyan;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+    text-align: center;
 }
