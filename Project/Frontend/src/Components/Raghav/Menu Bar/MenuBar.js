@@ -6,7 +6,7 @@ const MenuBar = ({menuList}) => {
     return (
         <div className="container">
             {menuList.map((menuItem) => {
-                return <Button variation={menuItem.variation} prompt={menuItem.prompt} />
+                return <Button variation={menuItem.variation} prompt={menuItem.prompt} action={menuItem.action} />
             })}
         </div>
     );

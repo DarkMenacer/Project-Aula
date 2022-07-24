@@ -5,17 +5,26 @@ import { Table } from "antd";
 import 'antd/dist/antd.min.css';
 import Wordmark from "../../Components/Pranav/Wordmark/Wordmark"
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const OrganiserHome = () =>{
 
+    /* Hook Variables */
+    const navigate = useNavigate();
+
+    /* Button Click Functions */
+    const handleManageEventsBtn = () => {
+        navigate(manageEventsRoute);
+    };
 
     /* Strings */
     const informative = "Organiser Tab";
+    const manageEventsRoute = "/ManageEvents";
 
     /* Component Properties */
     const menuList = [
         {variation: "outline_btn", prompt:"Create Event"},
-        {variation: "outline_btn", prompt:"Manage Event"},
+        {variation: "outline_btn", prompt:"Manage Event", action: handleManageEventsBtn},
     ];
 
     const columns = [
