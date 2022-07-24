@@ -43,7 +43,7 @@
     max-width:20rem;
 }
 
-.tile > :hover{
+.tile:hover{
     border: 0.25rem gold solid;
 }
 

@@ -2,6 +2,7 @@
     display: flex;
     justify-content: flex-start;
     padding: 0.65rem;
-    width: 50%;
-    background-color: bisque;
+    width: 100%;
+    background-color: white;
+    border: 0.2rem grey solid;
 }
