@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent_info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width:fit-content;
+    height: 100vh;
+    background-color: gainsboro;
+}
+
+.content_info{
+    min-width: 60%;
+    border: 0.25rem black solid;
+    padding: 2%;
+    background-color:white;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.panel_one{
+    background-color: lavender;
+    border: 0.10rem black solid;
+    margin-bottom:1%;
+    display: grid;
+    padding: 2%;
+    grid-template-columns: 1fr 3fr;
+    grid-auto-rows: minmax(2rem, auto);
+    grid-column-gap: 1rem;
+}
+
+.panel_one > .my_avatar{
+    grid-row: span 3;
+}
+
+.panel_one > .your_username{
+    align-self: start;
+    padding-left: 4.5%;
+    justify-self: left;
+}
+
+.panel_one > .your_name{
+    align-self: end;
+    padding-left: 3.5%;
+    justify-self: left;
+}
+
+.panel_two{
+    background-color: lavender;
+    border: 0.10rem black solid;
+    padding: 2%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-row-gap: 1rem;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+

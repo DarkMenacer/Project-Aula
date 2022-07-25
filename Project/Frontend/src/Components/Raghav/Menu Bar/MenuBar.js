@@ -1,6 +1,6 @@
 import React from 'react';
 import "./MenuBarStyle.css";
-import Button from "../Button/Button"
+import Button from "../../Pranav/Button/Button"
 
 const MenuBar = ({menuList}) => {
     return (
