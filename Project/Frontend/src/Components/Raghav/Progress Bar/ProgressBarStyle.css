@@ -1,6 +1,7 @@
-@import '~antd/dist/antd.css';
+@import '~antd/dist/antd.min.css';
 
 .container{
     width: 25%;
     background-color: white;
+    
 }

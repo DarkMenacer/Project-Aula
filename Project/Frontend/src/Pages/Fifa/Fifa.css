@@ -19,7 +19,7 @@
     align-items: center;
     border: 0.1rem grey solid;
     padding: 0.3rem;
-    background-color: white;
+    background-color: lavender;
 }
 
 .title{
@@ -33,7 +33,7 @@
 }
 
 .tile{
-    flex-basis: 50%;
+    flex-basis: 48%;
     padding: 1%;
     border: 0.1rem grey solid;
     background-color: white;
