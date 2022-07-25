@@ -1,4 +1,4 @@
-.parent_fifa{
+.parent_welcome{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,7 +7,7 @@
     background-color: gainsboro;
 }
 
-.content_fifa{
+.content_welcome{
     width: fit-content;
     border: 0.25rem black solid;
     padding: 2%;
@@ -22,7 +22,7 @@
     background-color: lavender;
 }
 
-.title{
+.title1{
     flex-basis:90%;
     min-width: fit-content;
     margin: 1%;

@@ -10,6 +10,7 @@
     align-items: center;
     height: 100vh;
     min-width: fit-content;
+    background-color: gainsboro;
 }
 
 .content_login{
@@ -20,6 +21,7 @@
     padding: 1rem;
     max-width: fit-content;
     display: block;
+    background-color: lavender;
 } 
 
 .logo{

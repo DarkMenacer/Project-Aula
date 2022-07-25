@@ -11,6 +11,7 @@
     align-items: center;
     height: 100vh;
     min-width: fit-content;
+    background-color: gainsboro;
 }
 
 .content_signup{
@@ -20,6 +21,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    background-color: lavender;
 }
 
 .btn_list{

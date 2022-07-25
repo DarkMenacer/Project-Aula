@@ -19,7 +19,7 @@ const LoginPage = ({setUser, adminUser}) => {
     /* Strings */
     const title = "AULA";
     const welcomePageRoute = "/Welcome";
-    const signupPageRoute = "/SignupOne";
+    const signupPageRoute = "/SignUpOne";
 
     /* Functions */
     const Login = (details) => {

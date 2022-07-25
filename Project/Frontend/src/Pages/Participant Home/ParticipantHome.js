@@ -14,7 +14,7 @@ const ParticipantHome = () => {
     /* Component Properties */
     const columns = [
         {title: "Sr.no",dataIndex: "srNo"},
-        {title: "Event name", dataIndex: "eventName", render:(text) => <NavLink to='/Login'>{text}</NavLink>},
+        {title: "Event name", dataIndex: "eventName", render:(text) => <NavLink to='/EventHome'>{text}</NavLink>},
         {title: "Organiser Name", dataIndex: "organiserName"},
         {title: "Leave", dataIndex: "leave"}
     ];
@@ -23,11 +23,6 @@ const ParticipantHome = () => {
         {key:"1", srNo:1, eventName:"Raghav's Piano Class", organiserName:"Pranav", leave:<CloseCircleOutlined />},
         {key:"2", srNo:2, eventName:"Pranav's Photography Class", organiserName:"Raghav", leave:<CloseCircleOutlined />}
     ];
-
-    /* Functions */
-    const delRow = (e) => {
-        console.log(e.target);
-    }
 
     return (
         <div className="parent_part">
