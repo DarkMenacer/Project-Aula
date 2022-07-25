@@ -1,0 +1,44 @@
+.parent_devices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+    background-color: gainsboro;
+    min-width: fit-content;
+}
+
+.content_devices{
+    width: fit-content;
+    border: 0.25rem black solid;
+    padding: 2%;
+    background-color: white;
+}
+
+.element{
+    border: 0.1rem black solid;
+    padding: 2%;
+    margin: 1%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    background-color: lavender;
+}
+
+.element > Button {
+    align-self:center;
+}
+
+.device_list{
+    align-self: center;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.password_list{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+}

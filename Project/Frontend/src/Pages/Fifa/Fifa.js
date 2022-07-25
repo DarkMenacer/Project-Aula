@@ -13,7 +13,7 @@ const Fifa = () => {
     const instruction = "Choose your mode of using";
     const OrganiserRoute = "/OrganiserHome";
     const ParticipantRoute = "/ParticipantHome";
-    
+    const AvatarRoute = "/Devices";
 
     return (
         <div className="parent_fifa">
@@ -23,7 +23,7 @@ const Fifa = () => {
                         <Wordmark prompt={instruction} variation={"direction"}/>
                     </div>
                     <div className="avt">
-                        <NavLink to={OrganiserRoute}><Avatar size={50} icon={<UserOutlined/>}/></NavLink>
+                        <NavLink to={AvatarRoute}><Avatar size={50} icon={<UserOutlined/>}/></NavLink>
                     </div>
                 </div>
                 <div className="wrapper">
