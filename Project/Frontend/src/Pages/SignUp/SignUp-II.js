@@ -13,7 +13,7 @@ const SignUpTwo = () => {
     /* Strings */
     const askEmail = "Enter your Email Id";
     const askPhone = "Enter your Phone No.";
-    const nextPage = "../SignUpThree";
+    const nextPage = "/SignUpThree";
 
 
     /* Button Click Functions */

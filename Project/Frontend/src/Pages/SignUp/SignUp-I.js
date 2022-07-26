@@ -10,7 +10,7 @@ function SignUpOne() {
     const navigate = useNavigate();
     
     /* Strings */
-    const newAccountRoute = "SignUpTwo";
+    const newAccountRoute = "/SignUpTwo";
 
     /* Button Click Functions */
     const handleNewAccBtn = () => {
