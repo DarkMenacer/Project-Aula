@@ -14,7 +14,7 @@
 }
 
 .content_info{
-    min-width: 60%;
+    width: 60%;
     border: 0.25rem black solid;
     padding: 2%;
     background-color:white;

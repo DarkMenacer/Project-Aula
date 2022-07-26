@@ -11,7 +11,6 @@ const LoginPage = ({setUser, adminUser}) => {
     /* Variables */
     let allowed = false;
     let flag = true;
-    let isAllEmtpyFlag = false;
 
     /* Hook variables */
     const [details, setDetails] = useState({ 
@@ -26,38 +25,20 @@ const LoginPage = ({setUser, adminUser}) => {
     const title = "AULA";
     const welcomePageRoute = "/Welcome";
     const signupPageRoute = "/SignUp";
+    const incompleteDetails = "Enter all the details bitch";
+    const currError = "Please enter your ";
+    const invalidDetails = "Username or Password is incorrect";
 
-    /* Functions */
-    const isAllEmpty = () => {
-        for (const [key, value] of Object.entries(details)){
-            if(value == ""){
-                return true;
-            }
-        }
-    }
-
-    const Login = (details) => {
-        if(details.email === adminUser.email && details.password === adminUser.password){
-          setUser({name: details.name, email: details.email,});
-          allowed = true;
-        } 
-        else if(isAllEmpty){
-            setError("Enter all the details bitch");
-        }else{
-            console.log("Details do not Match");
-            setError("Username or Password is incorrect");
-        }
-    };
-
+    /* Component Properties */
     const handleOnChange = (e) => {
       if(flag){
         for (const [key, value] of Object.entries(details)) {
           if(key == e.target.name){
             setError("");
             break;
-          }else if(value == ""){
-              const error = "Please enter your " + key;
-              setError(error);
+          }
+          else if(value == ""){
+              setError(currError + key);
               break;
             }
           }
@@ -66,6 +47,27 @@ const LoginPage = ({setUser, adminUser}) => {
       setDetails({ ...details, [e.target.name]: e.target.value })
     }
     
+    /* Functions */
+    const Login = (details) => {
+        if(details.email === adminUser.email && details.password === adminUser.password){
+          setUser({name: details.name, email: details.email,});
+          allowed = true;
+        } 
+        else if(isAllEmpty){
+            setError(incompleteDetails);
+        }
+        else{
+            console.log("Details do not Match");
+            setError(invalidDetails);
+        }
+    };
+
+    const isAllEmpty = () => {
+        for (const [value] of Object.entries(details)){
+            if(value == ""){ return true;}
+        }
+    }
+
     /* Button Click Functions */
     const handleLoginBtn = (e) => {
         e.preventDefault();
@@ -91,7 +93,7 @@ const LoginPage = ({setUser, adminUser}) => {
                     <TextEntry prompt={"Password"} type="password" id="password" name="password" handleOnChange={handleOnChange} value={details.password}/>
                     <Button prompt={"Log-in"} variation={"solid_btn"} type={"submit"}/>
                     <Button prompt={"Sign Up"} variation={"outline_btn"} action={handleSignupBtn}/>
-                    {error !== "" ? <div className="error">{error}</div> : ""}
+                    <div className="error">{error}</div>
                 </div>
             </div>
         </form>
