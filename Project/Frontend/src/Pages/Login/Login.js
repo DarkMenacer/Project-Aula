@@ -7,13 +7,19 @@ import "./LoginStyle.css"
 import {useNavigate} from "react-router-dom";
 
 const LoginPage = ({setUser, adminUser}) => {
-
+    
     /* Variables */
     let allowed = false;
+    let flag = true;
+    let isAllEmtpyFlag = false;
 
     /* Hook variables */
-    const [details, setDetails] = useState({ name: "", email: "", password: "" });
-    const [error, setError] = useState("");
+    const [details, setDetails] = useState({ 
+        name: "", 
+        email: "", 
+        password: "" 
+    });
+    const [error, setError] = useState();
     const navigate = useNavigate();
     
     /* Strings */
@@ -22,16 +28,43 @@ const LoginPage = ({setUser, adminUser}) => {
     const signupPageRoute = "/SignUp";
 
     /* Functions */
+    const isAllEmpty = () => {
+        for (const [key, value] of Object.entries(details)){
+            if(value == ""){
+                return true;
+            }
+        }
+    }
+
     const Login = (details) => {
         if(details.email === adminUser.email && details.password === adminUser.password){
           setUser({name: details.name, email: details.email,});
           allowed = true;
         } 
-        else{
-          console.log("Details do not Match");
-          setError("Username or Password is incorrect");
+        else if(isAllEmpty){
+            setError("Enter all the details bitch");
+        }else{
+            console.log("Details do not Match");
+            setError("Username or Password is incorrect");
         }
     };
+
+    const handleOnChange = (e) => {
+      if(flag){
+        for (const [key, value] of Object.entries(details)) {
+          if(key == e.target.name){
+            setError("");
+            break;
+          }else if(value == ""){
+              const error = "Please enter your " + key;
+              setError(error);
+              break;
+            }
+          }
+        }
+      flag = false;
+      setDetails({ ...details, [e.target.name]: e.target.value })
+    }
     
     /* Button Click Functions */
     const handleLoginBtn = (e) => {
@@ -53,9 +86,9 @@ const LoginPage = ({setUser, adminUser}) => {
                 </div>
                 <div>
                     <hr/>
-                    <TextEntry prompt={"Name"} type="text" id="name" name="name" details={details} setDetails={setDetails} />
-                    <TextEntry prompt={"Email"} type="email" id="email" name="email" details={details} setDetails={setDetails} />
-                    <TextEntry prompt={"Password"} type="password" id="password" name="password" details={details} setDetails={setDetails} />
+                    <TextEntry prompt={"Name"} type="text" id="name" name="name" handleOnChange={handleOnChange} value={details.name}/>
+                    <TextEntry prompt={"Email"} type="email" id="email" name="email" handleOnChange={handleOnChange} value={details.email}/>
+                    <TextEntry prompt={"Password"} type="password" id="password" name="password" handleOnChange={handleOnChange} value={details.password}/>
                     <Button prompt={"Log-in"} variation={"solid_btn"} type={"submit"}/>
                     <Button prompt={"Sign Up"} variation={"outline_btn"} action={handleSignupBtn}/>
                     {error !== "" ? <div className="error">{error}</div> : ""}
@@ -64,5 +97,4 @@ const LoginPage = ({setUser, adminUser}) => {
         </form>
     );
 }
-
 export default LoginPage;
