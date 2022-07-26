@@ -5,15 +5,17 @@ import "./EventHome.css";
 import 'antd/dist/antd.min.css';
 import { Popover, Steps, Table } from 'antd';
 import { LinkOutlined } from '@ant-design/icons';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
-const EventHome = () => {
+const EventHome = ({role}) => {
 
-    /* States */
-
+    /* Hook Variables */
+    const navigate = useNavigate();
 
     /* Strings */
     const eventName = "Event Name";
+    const timelineInfo = (role === "Organiser") ? "Event Timeline" : "Agenda";
+    const resourcesRoute = "Resources";
 
     /* Component Properties */
     const menuList = [
@@ -51,43 +53,44 @@ const EventHome = () => {
     /* Button Click Functions */
 
     function handleResourcesBtn(e){
-        console.log(e.target);
+        navigate(resourcesRoute);
     }
 
     function handleTimelineBtn(e){
         console.log(e.target);
     }
 
-  return (
-    <div className='parent_eve_home'>
-        <div className="content_eve_home">
-            <div className="title">
-                <div className="wmk">
-                    <Wordmark prompt={eventName} variation="direction" />
-                </div>
-                <div className="btn">
-                    <Button className="btn" variation={menuList[0].variation} prompt={menuList[0].prompt} action={menuList[0].action} />
-                </div>
-                <div className="btn">
-                    <Button className="btn" variation={menuList[1].variation} prompt={menuList[1].prompt} action={menuList[1].action} />
-                </div>
-            </div>
 
-            <div className="event_timeline">
-                <Wordmark prompt={"Event Timeline"} variation="word_wall" />
-                <Steps current={1} progressDot={customDot}>
-                    <Step title="Finished" description="You can hover on the dot." />
-                    <Step title="In Progress" description="You can hover on the dot." />
-                    <Step title="Waiting" description="You can hover on the dot." />
-                </Steps>
-            </div>
+    return (
+        <div className='parent_eve_home'>
+            <div className="content_eve_home">
+                <div className="title">
+                    <div className="wmk">
+                        <Wordmark prompt={eventName} variation="direction" />
+                    </div>
+                    <div className="btn">
+                        <Button className="btn" variation={menuList[0].variation} prompt={menuList[0].prompt} action={menuList[0].action} />
+                    </div>
+                    <div className="btn">
+                        <Button className="btn" variation={menuList[1].variation} prompt={menuList[1].prompt} action={menuList[1].action} />
+                    </div>
+                </div>
 
-            <div className="part_list">
-                <Table columns={columns} dataSource={data} pagination={false} bordered={true}/>
-            </div>
+                <div className="event_timeline">
+                    <Wordmark prompt={timelineInfo} variation="word_wall" />
+                    <Steps current={1} progressDot={customDot}>
+                        <Step title="Finished" description="You can hover on the dot." />
+                        <Step title="In Progress" description="You can hover on the dot." />
+                        <Step title="Waiting" description="You can hover on the dot." />
+                    </Steps>
+                </div>
 
+                <div className="part_list">
+                    <Table columns={columns} dataSource={data} pagination={false} bordered={true}/>
+                </div>
+
+            </div>
         </div>
-    </div>
   )
 }
 

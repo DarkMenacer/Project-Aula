@@ -10,11 +10,12 @@ const ParticipantHome = () => {
 
     /* Strings */
     const informative = "Participant Tab";
+    const eventNameRoute = "EventHome";
 
     /* Component Properties */
     const columns = [
         {title: "Sr.no",dataIndex: "srNo"},
-        {title: "Event name", dataIndex: "eventName", render:(text) => <NavLink to='/EventHome'>{text}</NavLink>},
+        {title: "Event name", dataIndex: "eventName", render:(text) => <NavLink to={eventNameRoute}>{text}</NavLink>},
         {title: "Organiser Name", dataIndex: "organiserName"},
         {title: "Leave", dataIndex: "leave"}
     ];

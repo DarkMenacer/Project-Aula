@@ -23,8 +23,9 @@ const OrganiserHome = () =>{
 
     /* Strings */
     const informative = "Organiser Tab";
-    const manageEventsRoute = "/ManageEvents";
-    const createEventsRoute = "/CreateEvents";
+    const manageEventsRoute = "ManageEvents";
+    const createEventsRoute = "CreateEvents";
+    const eventNameRoute = "EventHome";
 
     /* Component Properties */
     const menuList = [
@@ -34,7 +35,7 @@ const OrganiserHome = () =>{
 
     const columns = [
         {title: "Sr.no",dataIndex: "srNo"},
-        {title: "Event name", dataIndex: "eventName", render:(text) => <NavLink to='/EventHome'>{text}</NavLink>},
+        {title: "Event name", dataIndex: "eventName", render:(text) => <NavLink to={eventNameRoute}>{text}</NavLink>},
         {title: "No. of participants", dataIndex: "noOfParticipants"}
 
     ];
