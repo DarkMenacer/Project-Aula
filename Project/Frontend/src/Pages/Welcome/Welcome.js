@@ -13,8 +13,8 @@ const Welcome = ({user}) => {
     
     /* Strings */
     const instruction = "Choose your mode, " + user.name;
-    const OrganiserRoute = "OrganiserHome";
-    const ParticipantRoute = "ParticipantHome";
+    const OrganiserRoute = "/OrganiserHome";
+    const ParticipantRoute = "/ParticipantHome";
     const LoginRoute = "/Login";
 
 

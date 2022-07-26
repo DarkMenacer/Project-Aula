@@ -3,9 +3,9 @@ import Wordmark from '../../Components/Pranav/Wordmark/Wordmark';
 import Button from '../../Components/Pranav/Button/Button';
 import TextEntry from '../../Components/Pranav/Text Entry/TextEntry';
 import './SignUpStyle.css';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
-const SignUpFour = () => {
+const SignUpFour = ({newUser}) => {
 
     /* Hook Variables */
     const navigate = useNavigate();
@@ -22,6 +22,12 @@ const SignUpFour = () => {
       alert("Account Created!");
       navigate(loginPage);
     };
+
+  if(newUser.gender === "" || newUser.dob === ""){
+    return(
+      <Navigate to='../SignUpThree'/>
+    );
+  }
 
   return (
     <div className='parent_signup'>
