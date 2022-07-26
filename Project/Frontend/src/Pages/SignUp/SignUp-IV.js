@@ -20,7 +20,7 @@ const SignUpFour = ({newUser, setNewUser}) => {
     const askPassword = "Enter your Password";
     const confirmPassword = "Confirm your Password";
     const loginPage = "/Login";
-    const incompleteDetails = "Enter all the details bitch";
+    const incompleteDetails = "Enter all the details";
     const currError = "Please enter your ";
     const title = "Sign-up";
     /* const passDontMatch = "Above passwords don't match"; */
