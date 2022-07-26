@@ -30,3 +30,7 @@
     align-items: baseline;
     flex-wrap: wrap;
 }
+
+.error{
+    color: rgb(164, 0, 0);
+}
