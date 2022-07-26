@@ -17,9 +17,7 @@ const Welcome = ({user}) => {
     const ParticipantRoute = "/ParticipantHome";
     const LoginRoute = "/Login";
 
-
     /* Components Properties */
-
     const menu = (
         <Menu items= {[
             {label: <NavLink to="MyInfo">My Profile</NavLink>, key: "0"},
@@ -30,12 +28,8 @@ const Welcome = ({user}) => {
         />
       );
 
-
-
     if(user?.name === ""){
-        return(
-            <Navigate to={LoginRoute} />
-        );
+        return(<Navigate to={LoginRoute} />);
     }
     else{
         return (
@@ -63,7 +57,6 @@ const Welcome = ({user}) => {
                             <NavLink to={ParticipantRoute} className="mode_choice">Participant</NavLink>
                         </span>
                     </div>
-                   
                 </div>
             </div>
         );

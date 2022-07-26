@@ -11,12 +11,14 @@ function SignUpOne() {
     
     /* Strings */
     const newAccountRoute = "SignUpTwo";
+    const googleSignUp = "Sign-up with Google";
+    const githubSignUp = "Sign-up with GitHub";
+    const newAcc = "New Account";
 
     /* Button Click Functions */
     const handleNewAccBtn = () => {
       navigate(newAccountRoute);
     };
-
 
   return (
     <div className='parent_signup'>
@@ -26,9 +28,9 @@ function SignUpOne() {
         </div>
         <hr />
         <div className='btn_list'>
-          <Button prompt={"Sign-up with Google"} variation={"solid_btn"} />
-          <Button prompt={"Sign-up with Github"} variation={"solid_btn"} />
-          <Button prompt={"New Account"} variation={"outline_btn"} action={handleNewAccBtn}/>
+          <Button prompt={googleSignUp} variation={"solid_btn"} />
+          <Button prompt={githubSignUp} variation={"solid_btn"} />
+          <Button prompt={newAcc} variation={"outline_btn"} action={handleNewAccBtn}/>
         </div>
       </div>
     </div>

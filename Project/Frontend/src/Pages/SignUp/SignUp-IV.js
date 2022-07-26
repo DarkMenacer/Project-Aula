@@ -22,18 +22,18 @@ const SignUpFour = ({newUser, setNewUser}) => {
     const loginPage = "/Login";
     const incompleteDetails = "Enter all the details bitch";
     const currError = "Please enter your ";
-    const passDontMatch = "Above passwords don't match";
-
+    const title = "Sign-up";
+    /* const passDontMatch = "Above passwords don't match"; */
 
     /*Component Properties */
     const handleOnChange = (e) =>{
       if(flag){
         for (const [key, value] of Object.entries(newUser)) {
-          if(key == e.target.name){
+          if(key === e.target.name){
             setError("");
             break;
           }
-          else if(value == ""){
+          else if(value === ""){
               setError(currError + key);
               break;
             }
@@ -46,7 +46,7 @@ const SignUpFour = ({newUser, setNewUser}) => {
     /* Functions */
     const isAllEmpty = () => {
       for (const [value] of Object.entries(newUser)){
-          if(value == ""){ return true;}
+          if(value === ""){ return true;}
       }
     }
 
@@ -75,7 +75,7 @@ const SignUpFour = ({newUser, setNewUser}) => {
     <form onSubmit={handleSubmitBtn} className='parent_signup'>
       <div className="content_signup">
         <div>
-          <Wordmark prompt={"Sign-up"} variation={"headline"} />
+          <Wordmark prompt={title} variation={"headline"} />
         </div>
         <hr />
         <div className='btn_list'>

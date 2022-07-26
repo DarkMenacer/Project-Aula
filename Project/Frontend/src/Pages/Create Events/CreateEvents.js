@@ -12,7 +12,6 @@ const CreateEvents = () => {
     const btnText = "Create Event";
     const informative = "Enter the details of event";
 
-    
     return (
         <div className="parent_cre_eve">
             <div className="content_cre_eve">

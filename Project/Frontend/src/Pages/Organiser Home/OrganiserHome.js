@@ -45,7 +45,6 @@ const OrganiserHome = () =>{
         {key:"2", srNo:2, eventName:"Pranav's Photography Class", noOfParticipants:1}
     ];
 
-
     return(
         <div className="parent_org">
             <div className="content_org">

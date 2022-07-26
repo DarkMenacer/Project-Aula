@@ -5,7 +5,6 @@ import TextEntry from '../../Components/Pranav/Text Entry/TextEntry';
 import './SignUpStyle.css';
 import { useNavigate } from 'react-router-dom';
 
-
 const SignUpTwo = ({newUser, setNewUser}) => {
 
     /* Variables */
@@ -21,16 +20,18 @@ const SignUpTwo = ({newUser, setNewUser}) => {
     const nextPage = "../SignUpThree";
     const currError = "Please enter your ";
     const invalidPhone = "Phone no. should be 10 digits";
+    const title = "Sign-Up";
+    const btnPrompt = "Submit";
 
     /* Component Properties */
     const handleOnChange = (e) => {
       if(flag){
         for(const [key, value] of Object.entries(newUser)){
-          if(key == e.target.name){
+          if(key === e.target.name){
             setError("");
             break;
           }
-          else if(value == ""){
+          else if(value === ""){
             setError(currError + key);
             break;
           }
@@ -40,33 +41,31 @@ const SignUpTwo = ({newUser, setNewUser}) => {
       setNewUser({...newUser, [e.target.name]: e.target.value});
     };
 
-
     /* Button Click Functions */
     const handleSubmitBtn = (e) => {
       e.preventDefault();
-      if(newUser.phone == ""){
+      if(newUser.phone === ""){
         setError(currError + "Phone No.");
       }
-      else if (Math.floor(Math.log10(parseFloat(newUser.phone))) + 1 != 10){
+      else if (Math.floor(Math.log10(parseFloat(newUser.phone))) + 1 !== 10){
         setError(invalidPhone);
       }
       else{
-        navigate(nextPage, {replace: false});
+        navigate(nextPage);
       }
     };
-
 
   return (
     <form onSubmit={handleSubmitBtn} className='parent_signup'>
       <div className="content_signup">
         <div>
-          <Wordmark prompt={"Sign-up"} variation={"headline"} />
+          <Wordmark prompt={title} variation={"headline"} />
         </div>
         <hr />
         <div className='btn_list'>
             <TextEntry prompt={askEmail} type={"email"} name={"email"} value={newUser?.email} handleOnChange={handleOnChange}/>
             <TextEntry prompt={askPhone} type={"number"} name={"phone"} value={newUser?.phone} handleOnChange={handleOnChange}/>
-            <Button prompt={"Submit"} variation={"solid_btn"} type={"submit"} />
+            <Button prompt={btnPrompt} variation={"solid_btn"} type={"submit"} />
             <div className="error">{error}</div>
         </div>
         <hr />

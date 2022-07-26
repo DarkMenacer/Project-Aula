@@ -24,11 +24,6 @@ const ParticipantHome = () => {
         {key:"2", srNo:2, resourceName:"Class Video", type:"MP4", add:<PlusSquareFilled />}
     ];
 
-    /* Functions */
-    const delRow = (e) => {
-        console.log(e.target);
-    }
-
     return (
         <div className="parent_part">
             <div className="content_part">

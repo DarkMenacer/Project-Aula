@@ -25,17 +25,8 @@ const EventHome = ({role}) => {
 
     const { Step } = Steps;    
     const customDot = (dot, { status, index }) => (
-        <Popover
-          content={
-            <span>
-              step {index} status: {status}
-            </span>
-          }
-        >
-          {dot}
-        </Popover>
+        <Popover content={<span>step {index} status: {status}</span>}>{dot}</Popover>
     );
-
 
     const columns = [
         {title: "Sr.no",dataIndex: "srNo"},
@@ -49,9 +40,7 @@ const EventHome = ({role}) => {
         {key:"2", srNo:2, participantName:"Pranav", meetingTime:"4:00 - 5:00", agenda:<LinkOutlined />}
     ];
 
-
     /* Button Click Functions */
-
     function handleResourcesBtn(e){
         navigate(resourcesRoute);
     }
@@ -59,7 +48,6 @@ const EventHome = ({role}) => {
     function handleTimelineBtn(e){
         console.log(e.target);
     }
-
 
     return (
         <div className='parent_eve_home'>
@@ -75,7 +63,6 @@ const EventHome = ({role}) => {
                         <Button className="btn" variation={menuList[1].variation} prompt={menuList[1].prompt} action={menuList[1].action} />
                     </div>
                 </div>
-
                 <div className="event_timeline">
                     <Wordmark prompt={timelineInfo} variation="word_wall" />
                     <Steps current={1} progressDot={customDot}>
@@ -84,11 +71,9 @@ const EventHome = ({role}) => {
                         <Step title="Waiting" description="You can hover on the dot." />
                     </Steps>
                 </div>
-
                 <div className="part_list">
                     <Table columns={columns} dataSource={data} pagination={false} bordered={true}/>
                 </div>
-
             </div>
         </div>
   )

@@ -1,9 +1,10 @@
 import React, {useState} from "react";
 import Wordmark from "../../Components/Pranav/Wordmark/Wordmark";
-import Avatar from "../../Components/Pranav/Avatar/Avatar";
+import { Avatar } from "antd";
 import TextEntry from "../../Components/Pranav/Text Entry/TextEntry";
 import Button from "../../Components/Pranav/Button/Button";
 import "./LoginStyle.css"
+import Logo from "../../Assets/AulaLogo.png";
 import {useNavigate} from "react-router-dom";
 
 const LoginPage = ({setUser, adminUser}) => {
@@ -18,14 +19,14 @@ const LoginPage = ({setUser, adminUser}) => {
         email: "", 
         password: "" 
     });
-    const [error, setError] = useState();
+    const [error, setError] = useState("");
     const navigate = useNavigate();
     
     /* Strings */
     const title = "AULA";
     const welcomePageRoute = "/Welcome";
     const signupPageRoute = "/SignUp";
-    const incompleteDetails = "Enter all the details bitch";
+    const incompleteDetails = "Enter all the details";
     const currError = "Please enter your ";
     const invalidDetails = "Username or Password is incorrect";
 
@@ -33,11 +34,11 @@ const LoginPage = ({setUser, adminUser}) => {
     const handleOnChange = (e) => {
       if(flag){
         for (const [key, value] of Object.entries(details)) {
-          if(key == e.target.name){
+          if(key === e.target.name){
             setError("");
             break;
           }
-          else if(value == ""){
+          else if(value === ""){
               setError(currError + key);
               break;
             }
@@ -64,7 +65,7 @@ const LoginPage = ({setUser, adminUser}) => {
 
     const isAllEmpty = () => {
         for (const [value] of Object.entries(details)){
-            if(value == ""){ return true;}
+            if(value === ""){ return true;}
         }
     }
 
@@ -83,7 +84,7 @@ const LoginPage = ({setUser, adminUser}) => {
         <form onSubmit={handleLoginBtn} className="parent_login">
             <div className="content_login">
                 <div className="logo">
-                    <Avatar radius={"7.4rem"}/>
+                    <Avatar src= {Logo} size={112} />
                     <Wordmark variation={"headline"} prompt={title}/>
                 </div>
                 <div>
